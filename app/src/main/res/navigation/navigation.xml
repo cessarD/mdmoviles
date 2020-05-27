@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/vistamathfun_principal_fragment">
+
+    <fragment
+        android:id="@+id/vistamathfun_principal_fragment"
+        android:name="com.caceres06.modulosmoviles.vistamathfun_principal_fragment"
+        android:label="vistamathfun_principal_fragment"
+        tools:layout="@layout/fragment_vistamathfun_principal_fragment">
+        <action
+            android:id="@+id/action_vistamathfun_principal_fragment_to_menu_play_fragment"
+            app:destination="@id/menu_play_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_play_fragment"
+        android:name="com.caceres06.modulosmoviles.Menu_play_fragment"
+        android:label="Menu_play_fragment"
+        tools:layout="@layout/fragment_menu_play_fragment">
+        <action
+            android:id="@+id/action_menu_play_fragment_to_juego_division_fragment"
+            app:destination="@id/juego_division_fragment" />
+        <action
+            android:id="@+id/action_menu_play_fragment_to_juego_resta_fragment"
+            app:destination="@id/juego_resta_fragment" />
+        <action
+            android:id="@+id/action_menu_play_fragment_to_juego_multiplicacion_fragment"
+            app:destination="@id/juego_multiplicacion_fragment" />
+        <action
+            android:id="@+id/action_menu_play_fragment_to_suma"
+            app:destination="@id/suma" />
+    </fragment>
+    <fragment
+        android:id="@+id/juego_resta_fragment"
+        android:name="com.caceres06.modulosmoviles.Juego_resta_fragment"
+        android:label="Juego_resta_fragment"
+        tools:layout="@layout/fragment_juego_resta_fragment">
+        <action
+            android:id="@+id/action_juego_resta_fragment_to_won"
+            app:destination="@id/won" />
+    </fragment>
+    <fragment
+        android:id="@+id/juego_division_fragment"
+        android:name="com.caceres06.modulosmoviles.juego_division_fragment"
+        android:label="juego_division_fragment"
+        tools:layout="@layout/fragment_juego_division_fragment">
+        <action
+            android:id="@+id/action_juego_division_fragment_to_won"
+            app:destination="@id/won" />
+    </fragment>
+    <fragment
+        android:id="@+id/juego_multiplicacion_fragment"
+        android:name="com.caceres06.modulosmoviles.juego_multiplicacion_fragment"
+        android:label="juego_multiplicacion_fragment"
+        tools:layout="@layout/fragment_juego_multiplicacion_fragment">
+        <action
+            android:id="@+id/action_juego_multiplicacion_fragment_to_won"
+            app:destination="@id/won" />
+    </fragment>
+    <fragment
+        android:id="@+id/suma"
+        android:name="com.caceres06.modulosmoviles.suma"
+        android:label="suma"
+        tools:layout="@layout/fragment_suma">
+        <action
+            android:id="@+id/action_suma_to_won"
+            app:destination="@id/won" />
+    </fragment>
+    <fragment
+        android:id="@+id/won"
+        android:name="com.caceres06.modulosmoviles.won"
+        android:label="fragment_won"
+        tools:layout="@layout/fragment_won" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+    </fragment>
+</navigation>

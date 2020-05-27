@@ -7,22 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.caceres06.modulosmoviles.databinding.FragmentSumaBinding
 import com.caceres06.modulosmoviles.databinding.FragmentVistamathfunPrincipalFragmentBinding
 
 /**
  * A simple [Fragment] subclass.
  */
-class vistamathfun_principal_fragment : Fragment() {
+class suma : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding=DataBindingUtil.inflate<FragmentVistamathfunPrincipalFragmentBinding>(inflater,R.layout.fragment_vistamathfun_principal_fragment,container,false)
-        binding.playButton.setOnClickListener{
-            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_menu_play_fragment)
-        }
+        val binding= DataBindingUtil.inflate<FragmentSumaBinding>(inflater,R.layout.fragment_suma,container,false)
+
         return binding.root
     }
 
