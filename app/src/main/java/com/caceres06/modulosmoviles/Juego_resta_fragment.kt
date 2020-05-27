@@ -44,6 +44,7 @@ class Juego_resta_fragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
+    private var score = 0
     private val numQuestions = 4
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +58,7 @@ class Juego_resta_fragment : Fragment() {
         binding.button2.setOnClickListener{
 
             if(answers[0] == currentQuestion.answers[0]){
-
+                score++
                 questionIndex++
                 if (questionIndex < numQuestions) {
 
@@ -66,8 +67,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }else{
                 Toast.makeText(context,"Respuesta Erronea",Toast.LENGTH_SHORT).show()
@@ -79,8 +80,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }
 
@@ -88,7 +89,7 @@ class Juego_resta_fragment : Fragment() {
         binding.button3.setOnClickListener{
 
             if(answers[1] == currentQuestion.answers[0]){
-
+                score++
                 questionIndex++
                 if (questionIndex < numQuestions) {
 
@@ -97,8 +98,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }else{
                 Toast.makeText(context,"Respuesta Erronea",Toast.LENGTH_SHORT).show()
@@ -110,8 +111,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }
 
@@ -119,7 +120,7 @@ class Juego_resta_fragment : Fragment() {
         binding.button4.setOnClickListener{
 
             if(answers[2] == currentQuestion.answers[0]){
-
+                score++
                 questionIndex++
                 if (questionIndex < numQuestions) {
 
@@ -128,8 +129,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }else{
                 Toast.makeText(context,"Respuesta Erronea",Toast.LENGTH_SHORT).show()
@@ -141,8 +142,8 @@ class Juego_resta_fragment : Fragment() {
                     binding.invalidateAll()
 
                 }else{
-                    var a=4
-                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(a))
+
+                    it.findNavController().navigate(Juego_resta_fragmentDirections.actionJuegoRestaFragmentToWon(score))
                 }
             }
 
