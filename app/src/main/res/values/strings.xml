@@ -4,4 +4,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="actions">(%1$d/%2$d)</string>
+    <string name="app_title">MATH FUN</string>
+    <string name="title_tutorial">Tutorial</string>
+    <string name="title_play">Let\'s Play</string>
+    <string name="title_quiz">Quiz Time</string>
+    <string name="title_about">About Us</string>
+    <string name="title_game_division">VAMOS A DIVIDIR</string>
+    <string name="subtitle_game">Vamos a poner a prueba lo aprendido.</string>
+    <string name="btn_go_back">Atras</string>
+    <string name="title_game_multi">MULTIPLIQUEMOS</string>
+    <string name="title_game_resta">RESTAR ES DIVERTIDO</string>
+    <string name="title_game_suma">¡VAMOS A SUMAR!</string>
+
 </resources>
