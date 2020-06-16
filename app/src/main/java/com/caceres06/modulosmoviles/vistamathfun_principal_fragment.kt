@@ -30,7 +30,7 @@ class vistamathfun_principal_fragment : Fragment() {
             it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_about_us)
         }
         binding.button2.setOnClickListener {
-            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_about_us)
+            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_quiz_menu)
         }
         return binding.root
     }

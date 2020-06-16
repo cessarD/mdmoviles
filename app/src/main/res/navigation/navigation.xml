@@ -48,7 +48,8 @@
         tools:layout="@layout/fragment_juego_resta_fragment">
         <action
             android:id="@+id/action_juego_resta_fragment_to_won"
-            app:destination="@id/won" />
+            app:destination="@id/won"
+            app:popUpTo="@id/menu_play_fragment" />
     </fragment>
     <fragment
         android:id="@+id/won"
@@ -65,7 +66,8 @@
         android:label="Suma" >
         <action
             android:id="@+id/action_suma_to_won"
-            app:destination="@id/won" />
+            app:destination="@id/won"
+            app:popUpTo="@id/menu_play_fragment" />
     </fragment>
     <fragment
         android:id="@+id/juego_multiplicacion_fragment"
@@ -73,7 +75,8 @@
         android:label="Juego_multiplicacion_fragment" >
         <action
             android:id="@+id/action_juego_multiplicacion_fragment_to_won"
-            app:destination="@id/won" />
+            app:destination="@id/won"
+            app:popUpTo="@id/menu_play_fragment" />
     </fragment>
     <fragment
         android:id="@+id/juego_division_fragment"
@@ -81,7 +84,8 @@
         android:label="Juego_division_fragment" >
         <action
             android:id="@+id/action_juego_division_fragment_to_won"
-            app:destination="@id/won" />
+            app:destination="@id/won"
+            app:popUpTo="@id/menu_play_fragment" />
     </fragment>
     <fragment
         android:id="@+id/tutorial_menu"
@@ -107,5 +111,31 @@
     <fragment
         android:id="@+id/quiz_menu"
         android:name="com.caceres06.modulosmoviles.quiz_menu"
-        android:label="quiz_menu" />
+        android:label="quiz_menu" >
+        <action
+            android:id="@+id/action_quiz_menu_to_exam"
+            app:destination="@id/exam" />
+    </fragment>
+    <fragment
+        android:id="@+id/exam"
+        android:name="com.caceres06.modulosmoviles.exam"
+        android:label="exam" >
+        <action
+            android:id="@+id/action_exam_to_mal"
+            app:destination="@id/mal"
+            app:popUpTo="@id/quiz_menu" />
+        <action
+            android:id="@+id/action_exam_to_approved"
+            app:destination="@id/approved"
+            app:popUpTo="@id/quiz_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/approved"
+        android:name="com.caceres06.modulosmoviles.approved"
+        android:label="fragment_mal"
+        tools:layout="@layout/fragment_mal" />
+    <fragment
+        android:id="@+id/mal"
+        android:name="com.caceres06.modulosmoviles.mal"
+        android:label="mal" />
 </navigation>

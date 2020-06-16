@@ -19,24 +19,29 @@ import com.caceres06.modulosmoviles.databinding.FragmentVistamathfunPrincipalFra
 class Suma : Fragment() {
     data class Question(
         val text: String,
-        val answers: List<String>
+        val answers: List<String>,
+        val imagen:String
     )
     private val questions: MutableList<Question> = mutableListOf(
         Question(
             text = "7+3",
             answers = listOf("10","7","4")
+            ,imagen = "@drawable/s8"
         ),
         Question(
             text = "4+1",
-            answers = listOf("5","10","4")
+            answers = listOf("5","10","4"),
+            imagen = "@drawable/s8"
         ),
         Question(
             text = "7+2",
-            answers = listOf("9","0","4")
+            answers = listOf("9","0","4"),
+            imagen = "@drawable/s8"
         ),
         Question(
             text = "3+2",
-            answers = listOf("5","1","4")
+            answers = listOf("5","1","4"),
+            imagen = "@drawable/s8"
         )
 
 
@@ -44,6 +49,7 @@ class Suma : Fragment() {
 
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
+    lateinit var imagen: String
     private var questionIndex = 0
     private var score = 0
     private val numQuestions = 4
@@ -157,8 +163,9 @@ class Suma : Fragment() {
     }
 
     private fun setQuestion() {
-        currentQuestion = questions[questionIndex]
 
+        currentQuestion = questions[questionIndex]
+        imagen = currentQuestion.imagen
         answers = currentQuestion.answers.toMutableList()
 
         answers.shuffle()
