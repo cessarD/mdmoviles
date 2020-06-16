@@ -23,6 +23,15 @@ class vistamathfun_principal_fragment : Fragment() {
         binding.playButton.setOnClickListener{
             it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_menu_play_fragment)
         }
+        binding.tuto.setOnClickListener{
+            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_tutorial_menu)
+        }
+        binding.button4.setOnClickListener {
+            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_about_us)
+        }
+        binding.button2.setOnClickListener {
+            it.findNavController().navigate(R.id.action_vistamathfun_principal_fragment_to_about_us)
+        }
         return binding.root
     }
 

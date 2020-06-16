@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_vistamathfun_principal_fragment_to_menu_play_fragment"
             app:destination="@id/menu_play_fragment" />
+        <action
+            android:id="@+id/action_vistamathfun_principal_fragment_to_tutorial_menu"
+            app:destination="@id/tutorial_menu" />
+        <action
+            android:id="@+id/action_vistamathfun_principal_fragment_to_about_us"
+            app:destination="@id/about_us" />
+        <action
+            android:id="@+id/action_vistamathfun_principal_fragment_to_quiz_menu"
+            app:destination="@id/quiz_menu" />
     </fragment>
     <fragment
         android:id="@+id/menu_play_fragment"
@@ -74,4 +83,29 @@
             android:id="@+id/action_juego_division_fragment_to_won"
             app:destination="@id/won" />
     </fragment>
+    <fragment
+        android:id="@+id/tutorial_menu"
+        android:name="com.caceres06.modulosmoviles.tutorial_menu"
+        android:label="tutorial_menu" >
+        <action
+            android:id="@+id/action_tutorial_menu_to_tutorial2"
+            app:destination="@id/tutorial2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorial2"
+        android:name="com.caceres06.modulosmoviles.tutorial"
+        android:label="tutorial" >
+        <argument
+            android:name="operacion"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/about_us"
+        android:name="com.caceres06.modulosmoviles.about_us"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/quiz_menu"
+        android:name="com.caceres06.modulosmoviles.quiz_menu"
+        android:label="quiz_menu" />
 </navigation>
